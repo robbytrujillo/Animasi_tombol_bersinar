@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #626161;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    padding: 5px;
+    color: #fff;
+}
+/* ********************************************* */
+
+#checkbox {
+    display: none;
+}
+
+.toggler {
+    display: block;
+    width: 60px;
+    height: 31px;
+    border: 2px solid #fdfdfd;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.ball,
+.sun,
+.moon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ball {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #f8ec01;
+    border-radius: 50%;
+    left: 1px;
+    z-index: 10p;
+    transition: transform .5s ease-in-out;
+}
+
+.sun {
+    left: 5px;
+}
+
+.moon {
+    right: 5px;
+}
+
+#checkbox:checked + .ball {
+    transform: translate(29px, -50%);
+}
